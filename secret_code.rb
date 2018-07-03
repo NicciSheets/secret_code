@@ -17,7 +17,8 @@ def secret_code(top_secret)
 				new_letter =  "a"
 			else
 				new_letter = (letter.ord + 5)
-			new_secret_code << new_letter
+			new_letter2 = new_letter.chr
+			new_secret_code << new_letter2
 				end	
 			end
 		new_secret_code
