@@ -19,7 +19,7 @@ class TestSecretCode < Minitest::Test
 	# 	assert_equal(["eeee"], secret_code2("zzZZ"))
 	# end
 	def test_assert_character_returns_as_plus_5_ordinal_values
-		assert_equal(["snhhnnxxtxrfwy"], secret_code("Nicci is so smart"))
+		assert_equal("snhhnnxxtxrfwy", secret_code("Nicci is so smart"))
 	end
 
 end

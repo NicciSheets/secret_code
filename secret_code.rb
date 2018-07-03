@@ -19,15 +19,15 @@ def secret_code(top_secret)
 				new_letter = (letter.ord + 5)
 			new_letter2 = new_letter.chr
 			new_secret_code << new_letter2
-				end	
-			end
-		new_secret_code
+			end	
+		end
+		new_secret_code.reduce(:concat)
 end
 
-def letter_z()
-	new_letter
-	if letter == "z"
-		new_letter = "e"
-	end
-end
+# def letter_z()
+# 	new_letter
+# 	if letter == "z"
+# 		new_letter = "e"
+# 	end
+# end
 
