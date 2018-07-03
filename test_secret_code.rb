@@ -25,4 +25,8 @@ class TestSecretCode < Minitest::Test
 	def test_assert_returns_correct_letter
 		assert_equal("a", secret_code())
 	end
+
+	def test_assert_input_of_v
+		assert_equal("v", code_word("v"))
+	end
 end

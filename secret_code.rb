@@ -28,3 +28,5 @@ def secret_code()
 	"a"
 end
 
+def code_word(input)
+end
