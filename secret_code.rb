@@ -25,4 +25,6 @@
 # end
 
 def secret_code()
+	"a"
 end
+
