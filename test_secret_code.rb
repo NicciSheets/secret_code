@@ -18,8 +18,11 @@ class TestSecretCode < Minitest::Test
 	# def test_assert_z_returns_as_e
 	# 	assert_equal(["eeee"], secret_code2("zzZZ"))
 	# end
-	def test_assert_character_returns_as_plus_5_ordinal_values
-		assert_equal("snhhnnxxtxrfwy", secret_code("Nicci is so smart"))
-	end
+	# def test_assert_character_returns_as_plus_5_ordinal_values
+	# 	assert_equal("snhhn\%nx\%xt\%xrfwy", secret_code("Nicci is so smart"))
+	# end
 
+	def test_assert_returns_correct_letter
+		assert_equal("a", secret_code())
+	end
 end
