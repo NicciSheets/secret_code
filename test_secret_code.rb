@@ -8,7 +8,9 @@ class TestSecretCode < Minitest::Test
 		assert_equal("idislikesecretcodes", ready_text("I dislike secret codes."))
 	end
 
-	
+	def test_assert_string_returns_as_individual_characters
+		assert_equal(["i", "d", "i", "s", "l", "i", "k", "e", "s", "e", "c", "r", "e", "t", "c", "o", "d", "e", "s"], text2char_arr("idislikesecretcodes"))
+	end
 end
 
 #message : "I dislike secret codes."
