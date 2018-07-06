@@ -9,15 +9,17 @@ end
 
 
 def alphabet_index(letters)
-	# letters.to_a
-	# letter_arr = []
-	# counter = 0
-	# letters.map.each_with_index do |letter|
-	# 	if letter == "a"
-	# 		letter_arr << counter
-	# 	end 
-	# counter = counter + 1
-	# end
+	letters.to_a
+	letter_arr = []
+	counter = 0
+	letters.map.each_with_index do |letter|
+		if letter == "a"
+			letter_arr << counter
+		end 
+	counter = counter + 1
+	letter_arr << counter
+	end
+	letter_arr 
 end
 
 
