@@ -1,15 +1,15 @@
 def ready_text(message)
-	readied_message = ""
-	readied_message = message.downcase.gsub(/[^a-z0-9]/i, '')
-	return readied_message
+	message.downcase.gsub(/[^a-z0-9]/i, '')
 end
 
 
 def text2char_arr(message)
-	#message.split(//)
-
+	message.split(//)
 end
 
+
+def alphabet_index()
+end
 
 
 

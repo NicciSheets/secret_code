@@ -11,6 +11,11 @@ class TestSecretCode < Minitest::Test
 	def test_assert_string_returns_as_individual_characters
 		assert_equal(["i", "d", "i", "s", "l", "i", "k", "e", "s", "e", "c", "r", "e", "t", "c", "o", "d", "e", "s"], text2char_arr("idislikesecretcodes"))
 	end
+
+	def test_assert_indexing_regular_alphabet
+		assert_equal(["a".."z"], alphabet_index())
+	end
+
 end
 
 #message : "I dislike secret codes."
