@@ -17,9 +17,9 @@ def alphabet_index(letters)
 			letter_arr << counter
 		end 
 	counter = counter + 1
-	letter_arr << counter
+	counter.to_s
 	end
-	letter_arr 
+	
 end
 
 
