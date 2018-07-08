@@ -13,9 +13,9 @@ def atoz()
 end
 
 
-def ftoe()
-	atoz.rotate(5)
-end
+# def ftoe()
+# 	atoz.rotate(5)
+# end
 
 
 
@@ -33,23 +33,24 @@ def indexed_message(message)
 	indexed_message_arr 
 end
 
+# def indexed_decrypted_msg(message)
+	
+
+# end
+
+
 
 def encrypter(message)
 	encrypted_arr = []
 	indexed_message(message).each do |num|
-		if num == ftoe.index
-			ftoe[num]
+		if num == atoz.rotate(5).index
+			atoz.rotate(5)[num]
 		end
-	encrypted_arr << ftoe[num]
+	encrypted_arr << atoz.rotate(5)[num]
 	end
 	encrypted_arr.join
 end
 
-
-# def decrypter(message)
-	
-
-# end
 
 
 

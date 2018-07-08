@@ -16,9 +16,9 @@ class TestSecretCode < Minitest::Test
 		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], atoz())
 	end
 
-	def test_assert_ftoe_returns_as_shifted_array
-		assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
-	end
+	# def test_assert_ftoe_returns_as_shifted_array
+	# 	assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
+	# end
 
 	def test_assert_message_returns_as_indexed_array
 		assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_message("I dislike secret codes."))
@@ -28,10 +28,13 @@ class TestSecretCode < Minitest::Test
 		assert_equal("ninxqnpjxjhwjyhtijx", encrypter("I dislike secret codes."))
 	end
 
-	def test_assert_decrtypted_message_returns_as_ready_text
+	def test_assert_decrypted_message_returns_as_individual_characters
 		assert_equal(["n", "i", "n", "x", "q", "n", "p", "j", "x", "j", "h", "w", "j", "y", "h", "t", "i", "j", "x"], text2char_arr("ninxqnpjxjhwjyhtijx"))
 	end
 	
+	#def_test_assert_decrypted_message_returns_as_indexed_array
+	#	assert_equal([])
+
 end	
 
 
