@@ -16,10 +16,17 @@ class TestSecretCode < Minitest::Test
 		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], atoz())
 	end
 
-# 	def test_assert_indexing_regular_alphabet
+	def test_assert_ftoe_returns_as_shifted_array
+		assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
+	end
+
+end	
+
+
+
+#def test_assert_indexing_regular_alphabet
 # 		#letters = "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "w", "y", "z"
 # 		assert_equal([], alphabet_index("idislikesecretcodes"))
 # 	end
 
-end	
 # #message : "I dislike secret codes."

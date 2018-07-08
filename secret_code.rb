@@ -7,10 +7,18 @@ def text2char_arr(message)
 	message.split(//)
 end
 
+
 def atoz()
 	atoz = ("a".."z").to_a
 end
 
+
+def ftoe()
+end
+	# ftoz = ('f'..'z').to_a
+	# atoe = ('a'..'e').to_a
+	# encrypter = ftoz + atoe
+	# encrypter
 # def alphabet_index(message)
 	
 # 	#message.each do |letter|
