@@ -14,6 +14,7 @@ end
 
 
 def ftoe()
+	atoz.rotate(5)
 end
 	# ftoz = ('f'..'z').to_a
 	# atoe = ('a'..'e').to_a
