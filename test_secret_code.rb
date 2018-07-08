@@ -28,6 +28,10 @@ class TestSecretCode < Minitest::Test
 		assert_equal("ninxqnpjxjhwjyhtijx", encrypter("I dislike secret codes."))
 	end
 
+	def test_assert_decrtypted_message_returns_as_ready_text
+		assert_equal(["n", "i", "n", "x", "q", "n", "p", "j", "x", "j", "h", "w", "j", "y", "h", "t", "i", "j", "x"], text2char_arr("ninxqnpjxjhwjyhtijx"))
+	end
+	
 end	
 
 

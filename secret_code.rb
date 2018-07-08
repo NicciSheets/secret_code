@@ -16,7 +16,8 @@ end
 def ftoe()
 	atoz.rotate(5)
 end
-	
+
+
 
 def indexed_message(message)
 	indexed_message_arr = []
@@ -29,7 +30,7 @@ def indexed_message(message)
 			counter += 1
 		end
 	end
-	indexed_message_arr
+	indexed_message_arr 
 end
 
 
@@ -43,6 +44,17 @@ def encrypter(message)
 	end
 	encrypted_arr.join
 end
+
+
+# def decrypter(message)
+	
+
+# end
+
+
+
+
+
 
 
 
