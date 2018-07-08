@@ -4,7 +4,7 @@ end
 
 
 def text2char_arr(message)
-	message.split(//)
+	ready_text(message).split(//)
 end
 
 
@@ -20,7 +20,7 @@ end
 
 def indexed_message(message)
 	indexed_message_arr = []
-	message.each do |letters|
+	text2char_arr(message).each do |letters|
 		counter = 0
 		atoz.each do |letters_1|
 			if letters == letters_1
@@ -33,6 +33,18 @@ def indexed_message(message)
 end
 
 
+def encrypter(message)
+	# encrypted_arr = []
+	# indexed_message(message).each do |num|
+	# 	if num == ftoe.index
+	# 		ftoe[num]
+	# 	end
+	# encrypted_arr << ftoe[num]
+	# end
+	# encrypted_arr.join
+end
+
+
 
 	# ftoz = ('f'..'z').to_a
 	# atoe = ('a'..'e').to_a
@@ -42,6 +54,8 @@ end
 	
 # 	#message.each do |letter|
 # 		counter = 0
+
+#encrypter("I dislike secret codes.")
 
 
 

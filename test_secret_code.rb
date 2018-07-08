@@ -9,7 +9,7 @@ class TestSecretCode < Minitest::Test
 	end
 
 	def test_assert_string_returns_as_individual_characters
-		assert_equal(["i", "d", "i", "s", "l", "i", "k", "e", "s", "e", "c", "r", "e", "t", "c", "o", "d", "e", "s"], text2char_arr("idislikesecretcodes"))
+		assert_equal(["i", "d", "i", "s", "l", "i", "k", "e", "s", "e", "c", "r", "e", "t", "c", "o", "d", "e", "s"], text2char_arr("I dislike secret codes."))
 	end
 
 	def test_assert_atoz_returns_as_array_filled_with_alphabet
@@ -21,9 +21,12 @@ class TestSecretCode < Minitest::Test
 	end
 
 	def test_assert_message_returns_as_indexed_array
-		assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_message(["i", "d", "i", "s", "l", "i", "k", "e", "s", "e", "c", "r", "e", "t", "c", "o", "d", "e", "s"]))
+		assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_message("I dislike secret codes."))
 	end
 
+	def test_assert_indexed_message_returns_as_encrypted_secret_code
+		assert_equal("ninxqnpjxjhwjyhtijx", encrypter("I dislike secret codes."))
+	end
 
 end	
 
