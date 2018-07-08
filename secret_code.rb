@@ -13,7 +13,6 @@ def atoz()
 end
 
 
-
 def indexed_message(message)
 	indexed_message_arr = []
 	text2char_arr(message).each do |letters|
@@ -30,7 +29,7 @@ end
 
 
 
-def encrypter(message)
+def encrypter(message) #rotated alphabet by 5 places
 	encrypted_arr = []
 	indexed_message(message).each do |num|
 		if num == atoz.rotate(5).index
@@ -42,7 +41,7 @@ def encrypter(message)
 end
 
 
-def decrypter(message)
+def decrypter(message) #rotates back 5 places to original alphabet
 	decrypted_arr = []
 	indexed_message(message).each do |num|
 		if num == atoz.rotate(5).index
