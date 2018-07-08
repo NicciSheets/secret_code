@@ -47,6 +47,19 @@ def encrypter(message)
 end
 
 
+def decrypter(message)
+	# decrypted_arr = []
+	# indexed_message(message).each do |num|
+	# 	if num == atoz.rotate(5).index
+	# 		atoz.rotate(-5)[num]
+	# 	end
+	# decrypted_arr << atoz.rotate(-5)[num]
+	# end
+	# decrypted_arr.join
+end
+
+
+
 
 
 
