@@ -14,7 +14,7 @@ end
 
 
 # def ftoe()
-# 	atoz.rotate(5)
+#  	atoz.rotate(5)
 # end
 
 
@@ -32,11 +32,6 @@ def indexed_message(message)
 	end
 	indexed_message_arr 
 end
-
-# def indexed_decrypted_msg(message)
-	
-
-# end
 
 
 
