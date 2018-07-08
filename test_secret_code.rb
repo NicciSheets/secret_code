@@ -13,7 +13,7 @@ class TestSecretCode < Minitest::Test
 	end
 
 	def test_assert_atoz_returns_as_array_filled_with_alphabet
-		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "w", "y", "z"], atoz())
+		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], atoz())
 	end
 
 # 	def test_assert_indexing_regular_alphabet

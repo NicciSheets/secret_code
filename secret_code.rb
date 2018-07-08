@@ -8,7 +8,7 @@ def text2char_arr(message)
 end
 
 def atoz()
-	#atoz = ("a".."z").to_a
+	atoz = ("a".."z").to_a
 end
 
 # def alphabet_index(message)
