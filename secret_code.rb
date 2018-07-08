@@ -34,14 +34,14 @@ end
 
 
 def encrypter(message)
-	# encrypted_arr = []
-	# indexed_message(message).each do |num|
-	# 	if num == ftoe.index
-	# 		ftoe[num]
-	# 	end
-	# encrypted_arr << ftoe[num]
-	# end
-	# encrypted_arr.join
+	encrypted_arr = []
+	indexed_message(message).each do |num|
+		if num == ftoe.index
+			ftoe[num]
+		end
+	encrypted_arr << ftoe[num]
+	end
+	encrypted_arr.join
 end
 
 
