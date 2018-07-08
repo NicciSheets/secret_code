@@ -12,17 +12,14 @@ class TestSecretCode < Minitest::Test
 		assert_equal(["i", "d", "i", "s", "l", "i", "k", "e", "s", "e", "c", "r", "e", "t", "c", "o", "d", "e", "s"], text2char_arr("idislikesecretcodes"))
 	end
 
-	def test_assert_indexing_regular_alphabet
-		letters = "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "w", "y", "z"
-		assert_equal(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"], alphabet_index(letters))
+	def test_assert_atoz_returns_as_array_filled_with_alphabet
+		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "w", "y", "z"], atoz())
 	end
 
-	def test_assert_indexing_numbers
-		numbers = "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"
-		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "w", "y", "z"], number_index(numbers))
-	end
-	
+# 	def test_assert_indexing_regular_alphabet
+# 		#letters = "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "w", "y", "z"
+# 		assert_equal([], alphabet_index("idislikesecretcodes"))
+# 	end
 
-end
-
-#message : "I dislike secret codes."
+end	
+# #message : "I dislike secret codes."
