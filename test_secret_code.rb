@@ -18,11 +18,7 @@ class TestSecretCode < Minitest::Test
 
 	def test_assert_ftoe_returns_as_array_shifted_5
 		assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
-	end
-
-	def test_assert_ftoe_rotated_returns_back_as_original_alphabet
-		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], ftoe_rotated())
-	end
+	end	
 
 	def test_assert_message_returns_as_indexed_array
 		assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_message("I dislike secret codes."))

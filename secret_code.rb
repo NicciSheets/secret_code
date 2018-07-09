@@ -13,14 +13,7 @@ def atoz()
 end
 
 def ftoe()
-	ftoz = ("f".."z").to_a
-	atoe = ("a".."e").to_a
-	ftoe = ftoz + atoe
-	ftoe
-end
-
-def ftoe_rotated()
-	ftoe.rotate(-5)
+	atoz.rotate(5)
 end
 
 
