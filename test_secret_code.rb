@@ -16,6 +16,14 @@ class TestSecretCode < Minitest::Test
 		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], atoz())
 	end
 
+	def test_assert_ftoe_returns_as_array_shifted_5
+		assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
+	end
+
+	def test_assert_ftoe_rotated_returns_back_as_original_alphabet
+		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], ftoe_rotated())
+	end
+
 	def test_assert_message_returns_as_indexed_array
 		assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_message("I dislike secret codes."))
 	end
@@ -29,13 +37,13 @@ class TestSecretCode < Minitest::Test
 	end
 	
 	def test_assert_decrypted_message_returns_as_indexed_array
-	 	assert_equal([13, 8, 13, 23, 16, 13, 15, 9, 23, 9, 7, 22, 9, 24, 7, 19, 8, 9, 23], indexed_message("ninxqnpjxjhwjyhtijx"))
+	 	assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_encrypted_message("ninxqnpjxjhwjyhtijx"))
 	end
 
-	def test_assert_decrypted_message_returns_as_ready_text
-		assert_equal("idislikesecretcodes", decrypter("ninxqnpjxjhwjyhtijx"))
-	end
-end	
+	# def test_assert_decrypted_message_returns_as_ready_text
+	# 	assert_equal(["idislikesecretcodes"], decrypter("ninxqnpjxjhwjyhtijx"))
+	# end
+ end	
 
 
 
