@@ -12,6 +12,11 @@ def atoz()
 	atoz = ("a".."z").to_a
 end
 
+
+def zerotonine()
+	zerotonine = ("0".."9").to_a
+end
+
 def ftoe()
 	atoz.rotate(5)
 end
@@ -19,9 +24,9 @@ end
 
 def indexed_message(message) #for encryption
 	indexed_message_arr = []
-	text2char_arr(message).each do |letters|
+	text2char_arr(message).each do |letters, nums|
 		counter = 0
-		atoz.each do |letters_1|
+		atoz.each do |letters_1, nums_1|
 			if letters == letters_1
 				indexed_message_arr << counter
 			end
@@ -70,12 +75,6 @@ def decrypter(message) #rotates back 5 places to original alphabet
 end
 
 
+puts encrypter("I love to code!")
 
-
-
-
-
-
-
-
-	
+puts decrypter("nqtajythtij")	
