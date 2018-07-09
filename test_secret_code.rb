@@ -40,14 +40,17 @@ class TestSecretCode < Minitest::Test
 
 	def test_assert_decrypted_message_returns_as_individual_characters
 		assert_equal(["n", "i", "n", "x", "q", "n", "p", "j", "x", "j", "h", "w", "j", "y", "h", "t", "i", "j", "x"], text2char_arr("ninxqnpjxjhwjyhtijx"))
+		assert_equal(["u", "f", "w", "y", "3", "q", "n", "p", "j", "n", "y", "x", "6", "e", "e", "e"], text2char_arr("ufwy3qnpjnyx6eee"))
 	end
 	
 	def test_assert_decrypted_message_returns_as_indexed_array
 	 	assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_encrypted_message("ninxqnpjxjhwjyhtijx"))
+		assert_equal([15, 0, 17, 19, 24, 11, 8, 10, 4, 8, 19, 18, 27, 35, 35, 35], indexed_encrypted_message("ufwy3qnpjnyx6eee"))
 	end
 
 	def test_assert_decrypted_message_returns_as_ready_text
 	 	assert_equal("idislikesecretcodes", decrypter("ninxqnpjxjhwjyhtijx"))
+		assert_equal("partylikeits1999", decrypter("ufwy3qnpjnyx6eee"))
 	end
 
 end	
