@@ -40,9 +40,9 @@ class TestSecretCode < Minitest::Test
 	 	assert_equal([8, 3, 8, 18, 11, 8, 10, 4, 18, 4, 2, 17, 4, 19, 2, 14, 3, 4, 18], indexed_encrypted_message("ninxqnpjxjhwjyhtijx"))
 	end
 
-	# def test_assert_decrypted_message_returns_as_ready_text
-	# 	assert_equal(["idislikesecretcodes"], decrypter("ninxqnpjxjhwjyhtijx"))
-	# end
+	def test_assert_decrypted_message_returns_as_ready_text
+	 	assert_equal("idislikesecretcodes", decrypter("ninxqnpjxjhwjyhtijx"))
+	end
  end	
 
 

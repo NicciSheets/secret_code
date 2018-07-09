@@ -65,16 +65,16 @@ def encrypter(message) #rotated alphabet by 5 places
 end
 
 
-# def decrypter(message) #rotates back 5 places to original alphabet
-# 	decrypted_arr = []
-# 	indexed_message(message).each do |num|
-# 		if num == atoz.index
-# 			atoz[num]
-# 		end
-# 	decrypted_arr << atoz[num]
-# 	end
-# 	decrypted_arr
-# end
+def decrypter(message) #rotates back 5 places to original alphabet
+	decrypted_arr = []
+	indexed_encrypted_message(message).each do |num|
+		if num == atoz.index
+			atoz[num]
+		end
+	decrypted_arr << atoz[num]
+	end
+	decrypted_arr.join
+end
 
 
 
