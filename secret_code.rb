@@ -17,7 +17,7 @@ def ftoe()
 end
 
 
-def indexed_message(message)
+def indexed_message(message) #for encryption
 	indexed_message_arr = []
 	text2char_arr(message).each do |letters|
 		counter = 0
@@ -31,7 +31,7 @@ def indexed_message(message)
 	indexed_message_arr 
 end
 
-def indexed_encrypted_message(message)
+def indexed_encrypted_message(message) #for decryption
 	indexed_decrypted_msg_arr = []
 	text2char_arr(message).each do |letters|
 		counter = 0
