@@ -8,17 +8,15 @@ def text2char_arr(message)
 end
 
 
-def atoz()
+def atoz_withnum()
 	atoz = ("a".."z").to_a
-end
-
-
-def zerotonine()
 	zerotonine = ("0".."9").to_a
+	atoz + zerotonine
 end
 
-def ftoe()
-	atoz.rotate(5)
+
+def ftoe_withnum()
+	atoz_withnum.rotate(5)
 end
 
 
@@ -26,7 +24,7 @@ def indexed_message(message) #for encryption
 	indexed_message_arr = []
 	text2char_arr(message).each do |letters, nums|
 		counter = 0
-		atoz.each do |letters_1, nums_1|
+		atoz_withnum.each do |letters_1|
 			if letters == letters_1
 				indexed_message_arr << counter
 			end
@@ -40,7 +38,7 @@ def indexed_encrypted_message(message) #for decryption
 	indexed_decrypted_msg_arr = []
 	text2char_arr(message).each do |letters|
 		counter = 0
-		ftoe.each do |letters_1|
+		ftoe_withnum.each do |letters_1|
 			if letters == letters_1
 				indexed_decrypted_msg_arr << counter
 			end
@@ -54,10 +52,10 @@ end
 def encrypter(message) #rotated alphabet by 5 places
 	encrypted_arr = []
 	indexed_message(message).each do |num|
-		if num == ftoe.index
-			ftoe[num]
+		if num == ftoe_withnum.index
+			ftoe_withnum[num]
 		end
-	encrypted_arr << ftoe[num]
+	encrypted_arr << ftoe_withnum[num]
 	end
 	encrypted_arr.join
 end
@@ -66,15 +64,12 @@ end
 def decrypter(message) #rotates back 5 places to original alphabet
 	decrypted_arr = []
 	indexed_encrypted_message(message).each do |num|
-		if num == atoz.index
-			atoz[num]
+		if num == atoz_withnum.index
+			atoz_withnum[num]
 		end
-	decrypted_arr << atoz[num]
+	decrypted_arr << atoz_withnum[num]
 	end
 	decrypted_arr.join
 end
 
 
-puts encrypter("I love to code!")
-
-puts decrypter("nqtajythtij")	
